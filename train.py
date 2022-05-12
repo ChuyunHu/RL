@@ -31,15 +31,12 @@ if __name__ == "__main__":
 
     print("Data loading complete!")
     print("Data preprocessing...")
-
-    # 영화 id를 영화 제목으로
+    
     movies_id_to_movies = {movie[0]: movie[1:] for movie in movies_list}
     ratings_df = ratings_df.applymap(int)
 
-    # 유저별로 본 영화들 순서대로 정리
     users_dict = np.load('/home/diominor/Workspace/DRR/data/user_dict.npy', allow_pickle=True)
 
-    # 각 유저별 영화 히스토리 길이
     users_history_lens = np.load('/home/diominor/Workspace/DRR/data/users_histroy_len.npy')
 
     users_num = max(ratings_df["UserID"])+1
