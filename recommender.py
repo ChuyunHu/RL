@@ -53,7 +53,7 @@ class DRRAgent:
         self.buffer = PriorityExperienceReplay(self.replay_memory_size, self.embedding_dim)
         self.epsilon_for_priority = 1e-6
 
-        # ε-탐욕 탐색 하이퍼파라미터 ε-greedy exploration hyperparameter
+        # ε-greedy exploration hyperparameter
         self.epsilon = 1.
         self.epsilon_decay = (self.epsilon - 0.1)/500000
         self.std = 1.5
