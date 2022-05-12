@@ -1,0 +1,3 @@
+ml-1m is the Movie Review Dataset used.
+run train.ipynb to use the dataset to train the DRR model and save it
+run evaluation.ipynb to evaluate the trained model
